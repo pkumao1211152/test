@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">    
+<mapper namespace="tf.mapper.SourceDataMapper">
+
+<select id="selectTop10" resultType="tf.entity.SourceData">
+    select * from source_data order by clapCount desc limit 2
+</select>
+	
+</mapper>

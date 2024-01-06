@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Page</title>
+    <script>
+        function doGetRequest() {
+            fetch('http://localhost:8080/cyc/test/top')
+                .then(response => response.text())
+                .then(data => alert(data))
+                .catch(error => console.error('Error:', error));
+        }
+
+        function doDownloadRequest() {
+            window.location.href = 'http://localhost:8080/cyc/test/download';
+        }
+    </script>
+</head>
+<body>
+<button onclick="doGetRequest()">Get</button>
+<button onclick="doDownloadRequest()">Download</button>
+</body>
+</html>
